@@ -1,0 +1,33 @@
+{
+  "name": "tailwind",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development node build",
+    "build": "cross-env NODE_ENV=production node build",
+    "themes": "npm run tailwindcss:beige && npm run tailwindcss:purple",
+    "tailwindcss:beige": "postcss src/style/theme.beige.scss -o static/themes/theme.beige.css --config postcss/themes/beige/postcss.config.js",
+    "tailwindcss:purple": "postcss src/style/theme.purple.scss -o static/themes/theme.purple.css --config postcss/themes/purple/postcss.config.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@rockpack/compiler": "3.1.0",
+    "@rockpack/tsconfig": "3.1.0",
+    "autoprefixer": "^10.4.14",
+    "cssnano": "^5.1.15",
+    "postcss": "^8.4.21",
+    "postcss-cli": "^10.1.0",
+    "postcss-import": "^15.1.0",
+    "postcss-scss": "^4.0.6",
+    "tailwindcss": "^3.2.7"
+  }
+}
